@@ -1,0 +1,53 @@
+@use '../custom' as *;
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 30px 12px;
+   
+    .row{
+        @include media-breakpoint-up(xl) {
+            border-bottom: 0.2px solid $manatee;
+            max-width: 70vw;
+            margin: 0 auto;
+        }
+    }
+    .header__social{
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        padding: 0;
+        &-list{
+            list-style-type: none;
+            padding: 0;
+            &__item{
+                display: inline-block;
+                margin-right: 10px;
+               
+                &--link{
+                    color: $space-cadet;
+                    transition: color 0.3s ease-in-out;
+                    &:hover {
+                         color: $fiery-rose;
+                    }
+                }
+            }
+        }
+    }
+    
+    
+    .header__control {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include media-breakpoint-up(sm) {
+            justify-content: end;
+            &--menu{
+                margin: 0 0 0 10px;
+                }
+        }
+    }
+
+}

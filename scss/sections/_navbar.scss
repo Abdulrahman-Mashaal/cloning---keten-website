@@ -1,0 +1,56 @@
+@use '../custom' as *;
+
+
+
+nav{
+    background-color: $white;
+    height: 75px;
+    @include media-breakpoint-down(lg) {
+        display: none;
+    }
+    .container{
+        height: 100%;
+    }
+    .row{
+        @include media-breakpoint-up(lg) {
+           max-width: 50vw;
+           margin: 0 auto;
+            height: 100%;
+            vertical-align: middle;
+        }
+    .nav-list{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+         .drop-down{
+            a{
+                &::after{
+                    content: "\f322";
+                    font-size: 14px;
+                    font-family: "Font Awesome 5 Free"; 
+                    margin-left: 5px;
+                }
+            }
+         }
+        &__item{
+            display: inline-block;
+            &--link{
+                display: block;
+                padding: 7px 21px;
+                color: $manatee;
+                transition: color 0.3s ease-in-out;
+                text-decoration: none;
+                font-size: 14px;
+                line-height: 23.8px;
+                text-transform: capitalize;
+                font-family: 'Poppins', sans-serif;
+                &:hover {
+                    color: $fiery-rose;
+                }
+            }
+        }
+    }
+}
+}

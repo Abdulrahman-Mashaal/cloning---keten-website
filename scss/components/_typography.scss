@@ -1,0 +1,30 @@
+@use '../custom' as *;
+
+.header{
+    
+    .display-3{
+        font-family: 'Poppins', sans-serif;
+        &--title{
+            display: inline-block;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+            color: $space-cadet;
+            &::after{
+                content: "\2e";
+                font-family: "Font Awesome 5 Free"; 
+                font-weight: 700;
+                font-size: 55px; 
+                line-height: 30px;
+                margin-left: 5px;
+                color: $fiery-rose;
+            }
+        }
+        &--brief{
+            display: block;
+            font-size: 14px;
+            line-height: 23.8px;
+            color: $manatee;
+        }
+    }
+}

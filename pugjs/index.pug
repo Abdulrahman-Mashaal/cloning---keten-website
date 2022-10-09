@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    //- set meta tags
+    meta(charset="UTF-8")
+    meta(name='description' content='Katen-Blog')
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name='keywords' content='services, blogger, essays, مقالات')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    //- including styles file
+    include includes/styles.pug
+    //- including scripts file
+    include includes/scripts.pug
+    block homePage
+            title Katen - Minimal Blog & Magazine WordPress Theme
+  body
+    include sections/_header
+    include sections/_navbar
+    include sections/_main-slider
+    include sections/_main-section
+    include sections/_gallery
+    include sections/_footer
+    

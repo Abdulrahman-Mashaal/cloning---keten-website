@@ -1,0 +1,10 @@
+//- set icons 
+- var icons = [{name:'facebook', href:'https://facebook.com'},{name:'twitter', href:'https://twitter.com'},{name:'instagram', href:'https://instagram.com'},{name:'pinterest', href:'https://pinterest.com'},{name:'tiktok', href:'https://tiktok.com'},{name:'youtube', href:'https://youtube.com'} ];
+
+ul.header__social-list
+    each val in icons
+        li(class='header__social-list__item'): a.header__social-list__item--link(href=`${val['href']}` target='_blank')
+            if val['name']=='facebook'
+                i(class= `fa-brands fa-${val['name']}-f`, name=`${val['name']}`)
+            else
+                i(class= `fa-brands fa-${val['name']}`, name=`${val['name']}`)
