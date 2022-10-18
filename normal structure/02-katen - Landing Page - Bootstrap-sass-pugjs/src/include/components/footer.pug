@@ -1,0 +1,21 @@
+//- including mixins file
+include ./data/data.pug
+include ./mixins/index.pug
+
+div.footer
+    div.container
+        div.row
+            div.footer__content
+                div(class='footer__content--copyright')
+                    p.copyright
+                        | &copy; 2022 Katen. Theme by ThemeGer.
+                div(class='footer__content--social-list ')
+                    //-+socialIconGeneration('footer', headerSocialIcons)
+                    +socialIconGenerator(headerSocialIcons)
+                div(class='footer__content--control ')
+                    a(href='#header')
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="currentColor" class="bi bi-chevron-up" viewBox="0 1 16 16">
+                        <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" fill='#8f9bad'/>
+                        </svg>
+                        span Back to Top
+                

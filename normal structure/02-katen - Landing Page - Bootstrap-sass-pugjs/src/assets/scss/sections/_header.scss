@@ -1,0 +1,68 @@
+
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 12px; 
+    &__social{
+        display:inline-flex;
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+        padding: 0;
+        a{
+            color: $space-cadet;
+            margin-right: 20px;
+            transition: color 0.3s ease-in-out;
+            &:hover {
+                        color: $fiery-rose;
+                }
+           
+        }
+    }
+    &__personal{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+        &--img{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            img{
+
+            }
+        }
+        h1{
+        }
+    }
+    
+    &__control {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 24px; 
+        @include media-breakpoint-down(md) {
+            width: 100%;
+        }
+        @include media-breakpoint-up(md) {
+            justify-content: end;
+            margin-top: 0px; 
+            &--menu{
+                margin: 0 0 0 10px;
+                }
+        }
+        a{
+            background-image: linear-gradient(rgb(255, 163, 135), rgb(254, 75, 112));
+            color: $white;
+        }
+        
+    }
+
+}

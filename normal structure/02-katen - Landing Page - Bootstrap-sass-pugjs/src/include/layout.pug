@@ -1,0 +1,62 @@
+doctype html
+html(dir=langDir)
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+
+        title 
+            block title 
+                if lang === "en"
+                    | katen - Minimal Blog & Magazine WordPress Theme
+                else
+                    |
+
+        link(rel='icon' href=baseUrl + 'assets/images/logotit.png')
+        //- Styles Links Here
+
+        link(rel='stylesheet' href= baseUrl + 'assets/css/bootstrap.min.css', type='text/css')
+        link(rel='stylesheet' href= baseUrl + 'assets/css/swiper-bundle.min.css', type='text/css')
+        link(rel='stylesheet' href= baseUrl + 'assets/css/animate.css', type='text/css') 
+        //-link(rel='stylesheet' href= baseUrl + 'assets/css/style.css', type='text/css')
+        link(rel='stylesheet' href= baseUrl + 'assets/css/style.css', type='text/css')
+        //- font-awesome
+        link(rel='stylesheet' href= baseUrl + 'assets/css/fontawesome.css')
+        //- FONTS
+        //- POPPINS 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap', type='text/css')
+        //- ROBOTO 
+        link(rel='stylesheet', href='https://fonts.googleapis.com/css2?family=Lobster&display=swap', type='text/css')
+        //- link(rel="shortcut icon" href="../favicon.svg" type="image/x-icon")
+        link(rel="shortcut icon", href="https://themeger.shop/wordpress/katen/personal/wp-content/uploads/sites/2/2022/09/favicon-48x48.png", sizes="32x32", type="image/x-icon")
+
+
+
+
+    body
+        include components/mixins/index
+
+        //- Header Start
+        block header
+            include components/header 
+        //- Navbar Start
+        block header
+            include components/navbar 
+        //- Header End
+
+        block content 
+
+        //- Start Footer
+        block footer
+            include components/footer
+        //- End Footer
+
+
+        //- Site Scripts
+        script(src=baseUrl + 'assets/js/swiper-bundle.min.js')
+        script(src=baseUrl + 'assets/js/wow.min.js')
+        script(src=baseUrl + 'assets/js/jquery-3.6.0.min.js')
+        script(src=baseUrl + 'assets/js/bootstrap.bundle.min.js')
+        script(src=baseUrl + 'assets/js/plugin.js') 
+        script(src=baseUrl + 'assets/js/main.min.js') 
+        
+        block scripts

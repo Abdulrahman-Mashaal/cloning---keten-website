@@ -1,0 +1,11 @@
+dist/assets/css/style*.css
+dist/assets/css/*.map
+dist/ar
+dist/en
+dist/*.html
+node_modules
+.idea
+.vs
+*.rar
+*.zip
+*.ini

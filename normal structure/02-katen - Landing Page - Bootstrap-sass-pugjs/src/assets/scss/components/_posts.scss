@@ -1,0 +1,111 @@
+
+.posts{
+    padding: 0 12px;
+    width: 50%;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    } 
+    .post-card{
+        &__image{
+            position: relative;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            overflow: hidden;
+            max-width: 450px;
+            max-height: 236px;
+            @include media-breakpoint-down(sm) {
+                max-width: 100%;
+            } 
+            img{
+                transition: all 0.3s ease-in-out;
+                max-width: 100%;
+                display:inline-block;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            &__fluid-topic{
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                border-radius: 25px;
+                background-image: linear-gradient(to right, rgb(254, 75, 112), rgb(255, 163, 135));
+                p{
+                    padding: 6px 11px;
+                }
+            }
+            
+    
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        &__container{
+            position: relative;
+            padding: 30px 30px 0 30px;
+            border: 1px solid $bright-gray;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            &__fluid-icon{
+                position: absolute;
+                top: -25px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-image: linear-gradient(rgb(255, 163, 135), rgb(254, 75, 112));
+                svg{
+                    @include absoluteCenter();
+                }
+            }
+            .post-card__content{
+                margin: 0 auto;
+                &__heading{
+                    margin-bottom: 20px;
+                    display: inline-flex;
+                    justify-content: start;
+                    align-items: center;
+                    
+                        &--img{
+                            width:32px;
+                            height:32px;
+                            margin-right: 10px;
+                        }
+                        h2{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .dot{
+                                margin: 0 10px;
+                            }
+                        }
+                }
+            }
+            .post-card__footer{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-top: 0.2px solid $bright-gray;
+                padding: 20px 0;
+                margin-bottom: 0;
+                .bi{
+                    cursor: pointer;
+                }
+                .bi-three-dots{
+                    path{
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        path{
+                            fill: $fiery-rose;
+                        }
+                    }
+                }
+    
+            }
+        }
+    
+    }
+}

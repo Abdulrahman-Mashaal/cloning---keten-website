@@ -1,0 +1,19 @@
+﻿mixin _(txt1, txt2= " ")
+    if lang === "en"
+        if txt2 !== " "
+            | #{txt2}
+        else
+            | #{txt1}
+    else
+        | #{txt1}
+
+
+//- mixin which auto generate a list of icons and dynamically class name conventions 
+mixin socialIconGenerator(icons)
+        each icon in icons
+                a(class=`link`, href=`${icon['href']}`, target='_blank')
+                    if icon['name']=='facebook'
+                        i(class= `fa-brands fa-${icon['name']}-f`, name=`${icon['name']}`)
+                    else
+                        i(class= `fa-brands fa-${icon['name']}`, name=`${icon['name']}`)
+

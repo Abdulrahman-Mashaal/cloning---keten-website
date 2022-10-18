@@ -1,0 +1,26 @@
+//- including mixins file
+include ./data/data.pug
+include ./mixins/index.pug
+
+section.header#header
+    //- social list icons section
+    div(class='header__social col')
+        +socialIconGenerator(headerSocialIcons)
+    //- header personal section
+    div(class='header__personal text-center col-md-4')
+        a(class='header__personal--img', href='#')
+            img(src='./assets/images/header/katen.png', alt='katen' class='img-fluid')
+        a(class='header__personal--name', href='#') katen
+            span
+                i(class='fa-solid fa-circle')
+        h1  Minimal Blog & Magazine WordPress Theme
+    //- header control section
+    div(class='header__control btn-circular-group col')
+        a(class='header__control--search rounded-circle shadow-sm')
+            span
+                i(class='fa-solid fa-magnifying-glass')
+        a( class='header__control--menu rounded-circle shadow-sm')
+            span
+                i(class='fa-solid fa-bars')
+                
+

@@ -1,0 +1,39 @@
+
+.gallery{
+    margin: 50px 0;
+    .gallery__content{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-content: start;
+        @include media-breakpoint-up(xl) {
+            max-width: 60vw;
+            margin: 0 auto;
+        }
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            &__item{
+                border-radius: 15px;
+                overflow: hidden;
+                margin: 0 2px;
+            }
+        }
+        .fluid-tag{
+            @include absoluteCenter();
+            span{
+                border: 1px solid $bright-gray;
+                border-radius: 25px;
+                padding: 8px 24px;
+                text-align: center;
+                color: $white;
+                background-image: linear-gradient(to right, rgb(254, 75, 112), rgb(255, 163, 135));
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

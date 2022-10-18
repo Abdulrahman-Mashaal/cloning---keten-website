@@ -1,0 +1,73 @@
+
+.footer{
+    margin: 50px 0;
+    &__content{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: start;
+        @include media-breakpoint-up(xl) {
+            max-width: 60vw;
+            margin: 0 auto;
+        }
+        &--copyright{
+            width: 33.33%;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+                p{
+                    text-align: center;
+                }
+            }
+        }
+        &--social-list{
+
+            width: 33.33%;
+            display: inline-flex;
+            justify-content: space-evenly;
+            align-items: center;
+            a{
+                color: $space-cadet;
+                transition: color 0.3s ease-in-out;
+                &:hover {
+                     color: $fiery-rose;
+                    }
+                }
+                
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+            }
+            &--control{
+                width: 33.33%;
+                text-align: end;
+                a{
+                    margin-left: auto;
+                    padding: 6px 20px;
+                    border: 1px solid $bright-gray;
+                    border-radius: 25px;
+                    transition: all 0.3s ease-in-out;
+                    span{
+                        margin-left: 10px;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        border: 1px solid $fiery-rose;
+                        svg{
+                            path{
+                                fill: $fiery-rose;
+                            }
+                        }
+                        span{
+                            color: $fiery-rose;
+                        }
+                    }
+                }
+                @include media-breakpoint-down(md) {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+        }
+}
